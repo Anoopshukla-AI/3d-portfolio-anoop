@@ -1,0 +1,21 @@
+{
+  "name": "Anoop Shukla | AI Automation Engineer",
+  "short_name": "Anoop Shukla",
+  "description": "Portfolio of Anoop Shukla — AI automation systems, n8n workflows, RAG pipelines, agentic architectures.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0F12",
+  "theme_color": "#0D0F12",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

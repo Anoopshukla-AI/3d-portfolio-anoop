@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OG Image Generator — Anoop Shukla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #1a1a2e;
+      font-family: 'Inter', sans-serif;
+    }
+    .og-card {
+      width: 1200px;
+      height: 630px;
+      background: #0D0F12;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #1E2330;
+    }
+    .og-inner {
+      position: absolute;
+      inset: 8px;
+      border: 1px solid #1E2330;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
+    }
+    .og-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 600px;
+    }
+    .og-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      color: #E8EAF0;
+      line-height: 1.1;
+    }
+    .og-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #8A8FA8;
+      line-height: 1.3;
+    }
+    .og-stack {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 400;
+      font-size: 16px;
+      color: #00E5C8;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+    }
+    .og-url {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: #4A5068;
+      position: absolute;
+      bottom: 32px;
+      left: 88px;
+    }
+    .og-network {
+      width: 360px;
+      height: 360px;
+      flex-shrink: 0;
+    }
+    .og-network circle.node {
+      fill: #4A5068;
+    }
+    .og-network circle.node-accent {
+      fill: #00E5C8;
+    }
+    .og-network line {
+      stroke: #00E5C8;
+      stroke-opacity: 0.2;
+      stroke-width: 1.5;
+    }
+
+    /* Instructions below the card */
+    .instructions {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #8A8FA8;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="og-card">
+    <div class="og-inner">
+      <div class="og-text">
+        <div class="og-name">Anoop Shukla</div>
+        <div class="og-title">Senior AI Automation Engineer</div>
+        <div class="og-stack">n8n · LangChain · RAG · FastAPI · Python</div>
+      </div>
+      <svg class="og-network" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+        <!-- Edges -->
+        <line x1="60" y1="80" x2="180" y2="60" />
+        <line x1="180" y1="60" x2="300" y2="100" />
+        <line x1="300" y1="100" x2="260" y2="240" />
+        <line x1="260" y1="240" x2="120" y2="280" />
+        <line x1="120" y1="280" x2="60" y2="80" />
+        <line x1="180" y1="60" x2="260" y2="240" />
+        <line x1="60" y1="80" x2="260" y2="240" />
+        <line x1="180" y1="60" x2="120" y2="280" />
+        <!-- Nodes -->
+        <circle class="node-accent" cx="60" cy="80" r="6" />
+        <circle class="node" cx="180" cy="60" r="5" />
+        <circle class="node-accent" cx="300" cy="100" r="7" />
+        <circle class="node" cx="260" cy="240" r="5" />
+        <circle class="node-accent" cx="120" cy="280" r="6" />
+        <circle class="node" cx="200" cy="180" r="4" />
+      </svg>
+    </div>
+    <div class="og-url">anoopshukla.dev</div>
+  </div>
+  <div class="instructions">
+    Open this file in a browser. Right-click the card → Inspect → select the .og-card element → Screenshot node (Ctrl+Shift+P → "Capture node screenshot"). Save as og-image.jpg at 1200×630.
+  </div>
+</body>
+</html>

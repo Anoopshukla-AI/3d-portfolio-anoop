@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://anoopshukla.dev/sitemap.xml
+Disallow: /dist/
+Disallow: /*.json$
