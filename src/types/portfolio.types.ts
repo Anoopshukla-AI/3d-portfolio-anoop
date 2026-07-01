@@ -84,6 +84,10 @@ export interface ContactLinks {
   linkedin: string;
   github: string;
   email: string;
+  resume: string;
+  promptbase: string;
+  gumroad: string;
+  spotify: string;
   closingLine: string;
 }
 

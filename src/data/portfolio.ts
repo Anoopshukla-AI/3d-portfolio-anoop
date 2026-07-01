@@ -312,6 +312,10 @@ export const portfolioData: PortfolioData = {
     email: "an.oops@hotmail.com",
     linkedin: "https://www.linkedin.com/in/an-oops",
     github: "https://github.com/Anoopshukla-AI",
+    resume: "/resume.pdf",
+    promptbase: "https://promptbase.com/profile/anoops",
+    gumroad: "https://anoops.gumroad.com/",
+    spotify: "https://open.spotify.com/show/36pgWMgonKdkgqRxFZXsX5?si=f69f972875ac496f",
     closingLine: "No pitch decks. Just a conversation about what you need built."
   }
 };

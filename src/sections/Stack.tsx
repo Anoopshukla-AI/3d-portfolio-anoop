@@ -26,7 +26,7 @@ export function Stack() {
       gsap.fromTo(items,
         { scale: 0.6, opacity: 0 },
         {
-          scale: 1, opacity: 1, stagger: 0.05, duration: 0.8,
+          scale: 1, opacity: 1, stagger: 0.03, duration: 0.8,
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 75%",
@@ -38,30 +38,62 @@ export function Stack() {
     }
   }, { scope: sectionRef });
 
+  const categoryIcons: Record<string, string> = {
+    "LLMs": "🧠",
+    "Agents and Orchestration": "🔗",
+    "RAG and Vector Search": "🔍",
+    "Workflow Automation": "⚡",
+    "Backend and MLOps": "🛠",
+    "Cloud": "☁️",
+    "Data": "📊",
+  };
+
   return (
     <section
       id="stack"
       ref={sectionRef}
-      className="py-24 relative z-10 bg-surface/90 border-y border-border"
+      className="py-24 relative z-10"
       aria-label="Technology stack"
+      style={{ backgroundColor: 'rgba(20, 23, 32, 0.9)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}
     >
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-5xl font-display font-bold mb-16 text-center">
-          Tech Stack
-        </h2>
-        <div ref={itemsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="text-center mb-16">
+          <span className="inline-block text-xs font-mono uppercase tracking-widest text-accent mb-4 px-4 py-2 rounded-full border border-accent/20 bg-accent/5">
+            Technologies
+          </span>
+          <h2 className="text-3xl md:text-5xl font-display font-bold">
+            Tech Stack
+          </h2>
+          <p className="text-text-secondary mt-4 max-w-2xl mx-auto text-lg">
+            Production-tested tools and frameworks across the AI engineering stack.
+          </p>
+        </div>
+        <div ref={itemsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {Object.entries(portfolioData.stackItems).map(([category, items]) => (
-            <div key={category}>
-              <h3 className="text-accent font-mono mb-6 uppercase tracking-wider text-sm">
-                {category}
-              </h3>
-              <div className="flex flex-wrap gap-3">
+            <div
+              key={category}
+              className="rounded-xl border border-border p-6 transition-all duration-300 hover:border-accent/30"
+              style={{
+                background: 'rgba(13, 15, 18, 0.5)',
+                backdropFilter: 'blur(8px)',
+              }}
+            >
+              <div className="flex items-center gap-2 mb-5">
+                <span className="text-xl" aria-hidden="true">{categoryIcons[category] || "⚙️"}</span>
+                <h3 className="text-accent font-mono text-sm uppercase tracking-wider font-semibold">
+                  {category}
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
                 {items.map((item) => (
                   <div
                     key={item.name}
-                    className="stack-item bg-bg border border-border px-4 py-2 rounded-md hover:border-accent hover:scale-110 transition-transform duration-150 shadow-card cursor-default"
+                    className="stack-item group relative border border-border px-3 py-2 rounded-lg hover:border-accent/60 hover:scale-105 transition-all duration-200 cursor-default"
+                    style={{ background: 'rgba(20, 23, 32, 0.8)' }}
                   >
-                    <span className="text-text-primary font-medium">{item.name}</span>
+                    <span className="text-text-primary text-sm font-medium group-hover:text-accent transition-colors duration-200">
+                      {item.name}
+                    </span>
                   </div>
                 ))}
               </div>
