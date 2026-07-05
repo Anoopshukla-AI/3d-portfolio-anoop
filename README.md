@@ -1,5 +1,5 @@
 
-# Anoop Shukla — AI Automation Engineer Portfolio
+# Anoop Shukla — AI Automation Engineer Portfolio.
 
 A 3D interactive portfolio built with React Three Fiber, GSAP ScrollTrigger, and TypeScript. Features a particle-network scene, scroll-driven camera animations, and a fully responsive design with mobile SVG fallback.
 
