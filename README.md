@@ -1,5 +1,8 @@
-
 # Anoop Shukla — AI Automation Engineer Portfolio.
+
+[![Tech Stack](https://img.shields.io/badge/Tech_Stack-Production_Ready-3776AB?style=flat-square)](https://github.com/Anoopshukla-AI/3d-portfolio-anoop)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+
 
 A 3D interactive portfolio built with React Three Fiber, GSAP ScrollTrigger, and TypeScript. Features a particle-network scene, scroll-driven camera animations, and a fully responsive design with mobile SVG fallback.
 
